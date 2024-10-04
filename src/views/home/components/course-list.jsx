@@ -26,6 +26,7 @@ const CourseList = () => {
 			fetchCourses();
 		}
 		setLoading(false);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const handleEnroll = (course) => {

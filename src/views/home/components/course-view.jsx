@@ -5,7 +5,7 @@ import { CourseContext } from "../context/course-context";
 export const CourseView = () => {
 	const location = useLocation();
 	const id = location.pathname.split("/").pop();
-	const { state, dispatch } = useContext(CourseContext);
+	const { state } = useContext(CourseContext);
 
 	const [currentCourse, setCurrentCourse] = useState(null);
 
@@ -23,6 +23,7 @@ export const CourseView = () => {
 
 	useEffect(() => {
 		fetchCourse();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [id]);
 
 	const handleEnroll = () => {
